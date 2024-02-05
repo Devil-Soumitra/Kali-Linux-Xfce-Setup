@@ -37,7 +37,7 @@ Now add some important Program's Repositories in the sources.list using this com
 Proton VPN:
 
 ```bash
-cd /home/lucifer/Downloads && wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-2_all.deb && sudo dpkg -i protonvpn-stable-release_1.0.3-2_all.deb && rm protonvpn-stable-release_1.0.3-2_all.deb
+sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf" && sudo chmod +x "/etc/openvpn/update-resolv-conf"
 ```
 
 Docker-ce:
