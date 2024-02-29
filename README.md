@@ -6,7 +6,7 @@ kali-tweaks
 Download Required applications deb files from official sources and install them [Chrome, VS Code, XDM]:
 
 ```bash
-cd /home/lucifer/Downloads && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && wget https://az764295.vo.msecnd.net/stable/b3e4e68a0bc097f0ae7907b217c1119af9e03435/code_1.78.2-1683731010_amd64.deb && wget https://github.com/subhra74/xdm/releases/download/8.0.26/xdman_gtk_8.0.26_amd64.deb && wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb && sudo dpkg -i *
+cd /home/lucifer/Downloads && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && wget https://vscode.download.prss.microsoft.com/dbazure/download/stable/019f4d1419fbc8219a181fab7892ebccf7ee29a2/code_1.87.0-1709078641_amd64.deb && wget https://github.com/subhra74/xdm/releases/download/8.0.29/xdman_gtk_8.0.29_amd64.deb && sudo dpkg -i *
 ```
 
 Make a full upgrade by this Commands
@@ -37,7 +37,7 @@ Now add some important Program's Repositories in the sources.list using this com
 Proton VPN:
 
 ```bash
-sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf" && sudo chmod +x "/etc/openvpn/update-resolv-conf"
+sudo apt install openresolv && sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf" && sudo chmod +x "/etc/openvpn/update-resolv-conf"
 ```
 
 Docker-ce:
@@ -55,7 +55,7 @@ curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc|sudo gpg --d
 Install All Required Applications:
 
 ```bash
-sudo apt update && sudo apt install -y net-tools fonts-indic conky-all jq moc vlc libu2f-udev gcc g++ openjdk-17-jdk python3-pip python2 snapd burpsuite ffmpeg mugshot bleachbit john nmap gufw xxd preload ttf-mscorefonts-installer celluloid libportaudio2 proton-vpn-gnome-desktop dkms virtualbox virtualbox-ext-pack docker-ce docker-ce-cli containerd.io metasploit-framework dirbuster nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster xsltproc exploitdb hydra wpscan whatweb
+sudo apt update && sudo apt install -y net-tools fonts-indic conky-all jq moc libu2f-udev gcc g++ openjdk-17-jdk python3-pip python2 burpsuite ffmpeg mugshot bleachbit john nmap gufw xxd preload ttf-mscorefonts-installer celluloid libportaudio2 synaptic dkms virtualbox virtualbox-ext-pack docker-ce docker-ce-cli containerd.io metasploit-framework dirbuster nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster xsltproc exploitdb hydra wpscan whatweb snapd
 ```
 
 Download and Install Firefox Stander Version:
@@ -79,7 +79,7 @@ sudo systemctl enable --now bluetooth.service && sudo systemctl enable --now sna
 Install Setup Spotify:
 
 ```bash
-sudo snap refresh && sudo snap install spotify
+sudo curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg && echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list && sudo apt-get install spotify-client
 ```
 Then Copy the Desktop Entry:
 
@@ -170,5 +170,5 @@ Flagfox, FoxyProxy Standard, Wappalyzer, Dark Reader, Splatoon 2 Colours [Theme]
 At last Install Extentions for VS Code:
 
 ```txt
-C/C++, CMake Tools, Extension Pack for Java, Live Server, Prettier - Code formatter, Python, Pylance
+C/C++, CMake Tools, Extension Pack for Java, Live Server, Prettier - Code formatter, Python
 ```
