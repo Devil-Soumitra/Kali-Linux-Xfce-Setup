@@ -55,7 +55,7 @@ curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc|sudo gpg --d
 Install All Required Applications:
 
 ```bash
-sudo apt update && sudo apt install -y net-tools fonts-indic conky-all jq moc libu2f-udev gcc g++ openjdk-17-jdk python3-pip python2 burpsuite ffmpeg mugshot bleachbit john nmap gufw xxd preload ttf-mscorefonts-installer celluloid libportaudio2 synaptic dkms virtualbox virtualbox-ext-pack docker-ce docker-ce-cli containerd.io metasploit-framework dirbuster nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster xsltproc exploitdb hydra wpscan whatweb snapd
+sudo apt update && sudo apt install -y net-tools fonts-indic conky-all jq moc libu2f-udev gcc g++ openjdk-17-jdk python3-pip python2 burpsuite ffmpeg mugshot bleachbit john nmap gufw xxd preload ttf-mscorefonts-installer celluloid libportaudio2 synaptic ffmpegthumbnailer dkms virtualbox virtualbox-ext-pack docker-ce docker-ce-cli containerd.io metasploit-framework dirbuster nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster xsltproc exploitdb hydra wpscan whatweb snapd
 ```
 
 Download and Install Firefox Stander Version:
@@ -81,6 +81,12 @@ Install Setup Spotify:
 ```bash
 sudo curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg && echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list && sudo apt-get install spotify-client
 ```
+
+Install TeamViewer:
+```bash
+sudo apt install libminizip1 && cd /home/lucifer/Downloads && wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && sudo dpkg -i *.deb
+```
+
 Then Copy the Desktop Entry:
 
 ```bash
